@@ -1,12 +1,10 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
+import { Container, Typography, Box, Paper, Link } from '@material-ui/core';
+import DaMap from './DaMap';
 
 const Copyright = () => {
   return (
-    <Typography variant="title" color="textSecondary" align="center">
+    <Typography variant="h4" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="/">
         Da Trip
@@ -19,11 +17,11 @@ const Copyright = () => {
 
 const App = () => {
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Da Trip
-        </Typography>
+    <Container>
+      <Box my={2}>
+        <Paper>
+          <DaMap />
+        </Paper>
         <Copyright />
       </Box>
     </Container>
